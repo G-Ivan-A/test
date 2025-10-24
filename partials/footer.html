@@ -1,31 +1,21 @@
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-column">
-      <p>© 2025 OpenAI Business Lab — тестовая площадка по автоматизации бизнеса.</p>
-      <p>Электронная почта: <a href="mailto:info@open-ai.ru">info@open-ai.ru</a></p>
-      <p>Телефон: <a href="tel:+74955405859">+7 (495) 540-58-59</a></p>
-    </div>
-    <div class="footer-column">
-      <nav>
-        <a href="index.html">Главная</a> | 
-        <a href="services.html">Услуги</a> | 
-        <a href="contacts.html">Контакты</a> | 
-        <a href="privacy-policy.html">Политика</a>
-      </nav>
-    </div>
-  </div>
+<footer>
+  <p>© 2025 OpenAI Business Lab | Свободная лицензия | <a href="https://github.com/G-Ivan-A/test" target="_blank">GitHub</a></p>
+  <p><a href="mailto:info@open-ai.ru">info@open-ai.ru</a></p>
+  <p><a href="privacy-policy.html" target="_blank">Политика конфиденциальности</a></p>
 
-  <!-- Mango: виджета каналов МД -->
+  <!-- ДКТ -->
+  <script async src="//widgets.mango-office.ru/site/35218"></script>
+
+  <!-- ЗОЗ и чат (один раз!) -->
   <script>
-      (function(w, d, u, i, o, s, p) {
-          if (d.getElementById(i)) { return; } w['MangoObject'] = o;
-          w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) }; w[o].u = u; w[o].t = 1 * new Date();
-          s = d.createElement('script'); s.async = 1; s.id = i; s.src = u; s.charset = 'utf-8';
-          p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
-      }(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo'));
-      mgo({multichannel: {id: 23303}});
+    (function(w, d, u, i, o, s, p) {
+      if (d.getElementById(i)) return;
+      w['MangoObject'] = o;
+      w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) };
+      w[o].u = u; w[o].t = 1 * new Date();
+      s = d.createElement('script'); s.async = 1; s.id = i; s.src = u; s.charset = 'utf-8';
+      p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
+    })(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo');
+    mgo({multichannel: {id: 23303}});
   </script>
-  <!-- Mango: коллтрекинг счетчик -->
-  <script async src="https://widgets.mango-office.ru/site/35218"></script>
-  
 </footer>
