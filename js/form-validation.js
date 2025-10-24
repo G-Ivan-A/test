@@ -1,22 +1,31 @@
+// js/form-validation.js
+
 document.addEventListener('DOMContentLoaded', function(){
   const form = document.getElementById('leadForm');
-  if(!form) return;
+  if(!form) return; // Если форма не найдена, выходим
   form.addEventListener('submit', async function(e){
-    e.preventDefault();
+    e.preventDefault(); // Останавливаем стандартную отправку формы
     const data = new FormData(form);
-    // basic client-side validation
+
+    // Простая клиентская валидация
     const name = data.get('name') || '';
     const email = data.get('email') || '';
-    if(name.trim().length < 2){ alert('Пожалуйста, укажите имя.'); return; }
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ alert('Укажите корректный email.'); return; }
-    // Simulate sending
+    if(name.trim().length < 2){
+        alert('Пожалуйста, укажите имя (минимум 2 символа).');
+        return;
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        alert('Укажите корректный email.');
+        return;
+    }
+
+    // Имитация отправки данных (замените на реальный fetch запрос к вашему API)
     try {
-      // Here you could send to API via fetch
-      console.log('Lead data', Object.fromEntries(data.entries()));
-      alert('Спасибо! Ваша заявка принята. Мы свяжемся в ближайшее время.');
-      form.reset();
+      console.log('Данные заявки (имитация отправки):', Object.fromEntries(data.entries()));
+      alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.');
+      form.reset(); // Очищаем форму после "успешной" отправки
     } catch(err){
-      console.error(err);
+      console.error('Ошибка при отправке:', err);
       alert('Ошибка отправки. Попробуйте позже.');
     }
   });
