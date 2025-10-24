@@ -1,21 +1,29 @@
+<!-- partials/footer.html -->
 <footer>
   <p>© 2025 OpenAI Business Lab | Свободная лицензия | <a href="https://github.com/G-Ivan-A/test" target="_blank">GitHub</a></p>
   <p><a href="mailto:info@open-ai.ru">info@open-ai.ru</a></p>
   <p><a href="privacy-policy.html" target="_blank">Политика конфиденциальности</a></p>
 
-  <!-- ДКТ -->
+  <!-- ДКТ (Диалоги Клиент-Телефония) -->
   <script async src="//widgets.mango-office.ru/site/35218"></script>
 
-  <!-- ЗОЗ и чат (один раз!) -->
+  <!-- ЗОЗ (Заявки Онлайн Звонки) и Виджет чата (один скрипт) -->
   <script>
     (function(w, d, u, i, o, s, p) {
-      if (d.getElementById(i)) return;
+      if (d.getElementById(i)) return; // Проверка, не загружен ли скрипт уже
       w['MangoObject'] = o;
       w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) };
-      w[o].u = u; w[o].t = 1 * new Date();
-      s = d.createElement('script'); s.async = 1; s.id = i; s.src = u; s.charset = 'utf-8';
-      p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
+      w[o].u = u;
+      w[o].t = 1 * new Date();
+      s = d.createElement('script');
+      s.async = 1;
+      s.id = i;
+      s.src = u;
+      s.charset = 'utf-8';
+      p = d.getElementsByTagName('script')[0];
+      p.parentNode.insertBefore(s, p);
     })(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo');
+    // Инициализация с ID канала 23303 (замените на ваш ID, если другой)
     mgo({multichannel: {id: 23303}});
   </script>
 </footer>
